@@ -1,0 +1,31 @@
+@import "common.less";
+
+body.back-visible {
+    #back_btn {
+        display: inline-block;
+    }
+    #home_btn {
+        display: none;
+    }
+}
+
+body.home-visible {
+    #back_btn {
+        display: none;
+    }
+    #home_btn {
+        display: inline-block;
+    }
+}
+
+body.navigation-visible {
+    #content, #back_btn, #home_btn {
+        display: none;
+    }
+}
+body:not(.navigation-visible) {
+    #navigation, #nav_header {
+        display: none;
+    }
+}
+

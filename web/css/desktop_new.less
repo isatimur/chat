@@ -1,0 +1,99 @@
+/*Colors start*/
+@white:         #ffffff;
+@green:         #00985F;
+@green-dark:    darken(@green, 5%);
+@green-light:   lighten(@green, 3%);
+@purple:        #7030a0;
+@purple-dark:   darken(@purple, 5%);
+@megagray:      #E8E8E8;
+@megagraytext:  #5D5D5D;
+@changed-red:   #ff0000;
+
+@gray-darker:   lighten(#000, 13.5%); // #222
+@gray-dark:     lighten(#000, 20%);   // #333
+@gray:          lighten(#000, 33.5%); // #555
+@gray-light:    lighten(#000, 60%);   // #999
+@gray-lighter:  lighten(#000, 93.5%); // #eee
+/*Colors end*/
+
+/*Высота верхней панели*/
+@header-height:     40px;
+
+
+/*Header title*/
+.title {
+    text-align: center;
+    padding-top: 7px;
+    padding-left: 10px;
+    margin-bottom: 8px;
+    color: @white;
+    float: left;
+}
+
+/*Header panel*/
+#header {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    font-size: 18px;
+    height: @header-height;
+    background-color: @green;
+    border-bottom: 1px solid @white;
+}
+
+/*Title of the current page*/
+#page_title {
+    .title;
+}
+
+/*Header buttons. Back, Home, Up, Actions etc*/
+.header-button {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    position: relative;
+    padding: 0px 10px 0px;
+    width: 40px;
+    color: @white;
+    text-align: center;
+    height: @header-height;
+}
+
+#logout_btn {
+    .header-button;
+}
+
+#logout_btn {
+    float: right;
+}
+
+/*Common fonts*/
+@font-face {
+    font-family: 'DinDisplay Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url(fonts/pfdindisplaypro-light.woff) format('woff');
+}
+@font-face {
+    font-family: 'DinDisplay Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/pfdindisplaypro-reg.woff) format('woff');
+}
+@font-face {
+    font-family: 'DinDisplay Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/pfdindisplaypro-bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'DinDisplay Pro';
+    font-style: italic;
+    font-weight: 400;
+    src: url(fonts/pfdindisplaypro-italic.woff) format('woff');
+}
+body, ul.dynatree-container {
+    font-family: "DinDisplay Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*End common fonts*/

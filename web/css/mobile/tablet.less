@@ -1,0 +1,121 @@
+@import "common.less";
+
+@nav-width: 320px;
+
+@smartphone:    ~"only screen and (max-width: 767px)";
+@tablet:        ~"only screen and (min-width: 768px)";
+
+@media @smartphone {    
+    body.back-visible {
+        #back_btn {
+            display: inline-block;
+        }
+        #home_btn {
+            display: none;
+        }
+    }
+
+    body.home-visible {
+        #back_btn {
+            display: none;
+        }
+        #home_btn {
+            display: inline-block;
+        }
+    }
+
+    body.navigation-visible {
+        #content, #content_header {
+            display: none;
+        }
+    }
+    body:not(.navigation-visible) {
+        #navigation, #nav_header {
+            display: none;
+        }
+    }
+}
+
+@media @tablet {
+    #navigation, #content {          
+        .list-group { 
+            a.list-group-item.selected {
+                background-color: @green !important;
+                border-color: @green;
+                color: @white;
+                z-index: 2;
+                .badge {
+                    background-color: @white;   
+                    color: @green;
+                }
+                .badge-new {
+                    color: @purple;
+                }
+                .badge-size {
+                    color: @green;
+                }
+                .badge-green {
+                    color: @green;
+                }
+                .list-group-item-text {
+                    color: @white;
+                }
+                .list-group-item-heading {
+                    color: @white;
+                }
+            }
+        }
+    }
+    #header.up-visible {
+        #up_btn {
+            display: inline-block;
+        }
+    }
+    #navigation {
+        border-right: 3px solid @megagray;
+        right: calc(~"100% - " @nav-width);
+    }
+    #nav_header, #navigation {
+        width: @nav-width;
+    }
+    #content {
+        border-left: 3px solid @megagray;
+        left: @nav-width;
+    }
+    #content_header, #content {
+        width: calc(~"100% - " @nav-width);
+    }
+    #nav_header {
+        height: @header-height;
+    }
+    
+    #back_btn, #home_btn, #nav_header .actions-btn {
+        display: none;
+    }
+    
+    .actions-menu {
+        left: @nav-width !important;
+    }
+
+    #method_form {
+        left: @nav-width;
+    }
+
+    body.form-visible {
+        #navigation {
+            display: block;
+        }
+        #back_btn {
+            display: none;
+        }
+        #method_form {
+            display: block;
+        }
+    }
+
+    body:not(.form-visible) {
+        #method_form, #form_title {
+            display: none;
+        }
+    }
+}

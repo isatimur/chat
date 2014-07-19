@@ -1,0 +1,62 @@
+/* 
+    Document   : login
+    Created on : Aug 7, 2013, 2:55:33 PM
+    Author     : nikolay.dementyev
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1370px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1570px;
+    }
+}
+
+body { 
+    padding-top: 10%;
+}
+
+body > .container {
+    max-width: 400px;
+}
+
+form {
+    padding: 10px 20px 10px 10px;
+}
+
+/*Common fonts*/
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(fonts/opensanslight.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(fonts/opensans.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(fonts/opensansbold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(fonts/opensansitalic.woff) format('woff');
+}
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*End common fonts*/
+
